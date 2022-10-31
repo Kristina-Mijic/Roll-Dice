@@ -1,0 +1,58 @@
+@import './color.scss';
+
+.card-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $main-background-color;
+  text-align: center;
+
+  .card-modal {
+    padding: 40px 80px;
+    background: $background-card;
+    border-radius: $border-radius;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 800px;
+    min-height: 350px;
+    position: relative;
+    margin: 10px;
+  }
+
+  .card-modal .start-title {
+    color: $font-color;
+    font-size: 64px;
+  }
+
+  .card-modal .btn-next {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px 60px;
+    border-radius: $border-radius;
+    font-size: 24px;
+
+    &:hover {
+      background-color: $hover-btn-color;
+      color: $white;
+    }
+  }
+}
+
+.card-wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.card-wrapper .input-modal input {
+  padding: 20px;
+  min-width: 400px;
+  border-radius: 10px;
+  font-size: 18px;
+}
