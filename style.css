@@ -1,57 +1,143 @@
-.card-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #372948;
-  text-align: center;
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.card-wrapper .card-modal {
-  padding: 40px 80px;
-  background: #EDE4E0;
-  border-radius: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 800px;
-  min-height: 350px;
-  position: relative;
-  margin: 10px;
+html {
+  font-size: 10px;
 }
 
-.card-wrapper .card-modal .start-title {
-  color: #251B37;
-  font-size: 64px;
-}
-
-.card-wrapper .card-modal .btn-next {
+.btn {
   cursor: pointer;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  padding: 20px 60px;
   border-radius: 10px;
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
-.card-wrapper .card-modal .btn-next:hover {
+.btn:hover {
   background-color: #372948;
   color: #fff;
 }
 
-.card-wrapper::before {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  vertical-align: middle;
+.cards-modals-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #372948;
+  position: relative;
 }
 
-.card-wrapper .input-modal input {
+.cards-modals-wrapper .card-modal {
+  background: #EDE4E0;
+  border-radius: 10px;
+  display: block;
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-modals-wrapper .card-modal .start-title {
+  color: #251B37;
+  font-size: 6.4rem;
+  margin-bottom: 30px;
+}
+
+.cards-modals-wrapper .card-modal .btn-next {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 20px 60px;
+}
+
+.cards-modals-wrapper .input-modal {
+  display: none;
+}
+
+.cards-modals-wrapper .last-card {
+  display: none;
+}
+
+.cards-modals-wrapper .input-modal input {
   padding: 20px;
   min-width: 400px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.cards-modals-wrapper .last-card .counter-modal {
+  font-size: 6.4rem;
+}
+
+.players-cards-wrapper {
+  display: none;
+}
+
+.players-cards-wrapper .two-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 90%;
+}
+
+.players-cards-wrapper .two-cards-wrapper .players {
+  background-color: #EDE4E0;
+  text-align: center;
+  height: 100%;
+  border: 1px solid black;
+  width: 50%;
+  position: relative;
+}
+
+.players-cards-wrapper .two-cards-wrapper .players .player-title {
+  font-size: 5rem;
+}
+
+.players-cards-wrapper .two-cards-wrapper .players .player-name {
+  font-size: 7rem;
+  color: #8D72E1;
+}
+
+.players-cards-wrapper .two-cards-wrapper .players img {
+  padding: 40px 0;
+}
+
+.players-cards-wrapper .two-cards-wrapper .players .player-total,
+.players-cards-wrapper .two-cards-wrapper .players .player-current {
+  font-size: 3rem;
+  text-align: left;
+  width: 50%;
+}
+
+.players-cards-wrapper .two-cards-wrapper .btn-new-game {
+  position: absolute;
+  top: 5%;
+  z-index: 1;
+  padding: 20px;
+}
+
+.players-cards-wrapper .two-cards-wrapper .bottom-btn-game {
+  position: absolute;
+  z-index: 1;
+  padding: 5px 50px;
+  width: 15%;
+}
+
+.players-cards-wrapper .two-cards-wrapper .btn-store {
+  bottom: 15%;
+}
+
+.players-cards-wrapper .two-cards-wrapper .btn-roll {
+  bottom: 6%;
 }
 /*# sourceMappingURL=style.css.map */

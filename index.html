@@ -8,18 +8,61 @@
   <title>Game Role Dice</title>
 </head>
 <body>
-  <div class="card-wrapper">
-    <div class="card-modal">
+  <div class="cards-modals-wrapper">
+
+    <div class="card-modal" id="starting-card">
       <h1 class="start-title">ROLL DICE</h1>
-      <button class="btn-next">Next</button>
+      <img src="./images/dice-start.png" alt="">
+      <button class="btn-next btn" id="btn-1">Next</button>
     </div>
 
-    <div class="card-modal input-modal">
-      <h1 class="start-title">Enter the name</h1>
-      <input type="text" name="" id="" placeholder="Uneti ime prvog igraca">
-      <button class="btn-next">Next</button>
+    <div class="card-modal input-modal" id="input-card-1">
+      <h1 class="start-title">Player 1</h1>
+      <input type="text" name="" id="player1-input" placeholder="Uneti ime prvog igraca">
+      <button class="btn-next btn" id="btn-2">Next</button>
     </div>
+
+    <div class="card-modal input-modal" id="input-card-2">
+      <h1 class="start-title">Player 2</h1>
+      <input type="text" name="" id="player2-input" placeholder="Uneti ime drugog igraca">
+      <button class="btn-next btn" id="btn-3">Next</button>
+    </div>
+
+    <div class="card-modal last-card" id="last-card-counter">
+      <p class="counter-modal" id="counter-modal"></p>
+    </div>
+
+    <div class="players-cards-wrapper" id="cards-players">
+      <div class="two-cards-wrapper card-modal"> 
+        
+        <div class="player-1-card players">
+          <h1 class="player-title">Igrac 1</h1>
+          <h2 class="player-name" id="player-name-1"></h2>
+          <img src="./images/dice-1.png" alt="">
+          <p class="player-total">TOTAL:</p>
+          <p class="player-current">CURRENT:</p>
+        </div>
+          <button class="btn-new-game btn">New Game</button>
+
+          <button class="btn-store btn bottom-btn-game" id="btn-store-id">Store</button>
+          <button class="btn-roll btn bottom-btn-game" id="btn-roll-id">Roll</button>
+
+         <div class="player-2 players players">
+          <h1 class="player-title">Igrac 2</h1>
+          <h2 class="player-name" id="player-name-2"></h2>
+          <img src="./images/dice-1.png" alt="">
+          <p class="player-total">TOTAL:</p>
+          <p class="player-current">CURRENT:</p>
+        </div> 
+  
+      </div>
+    </div> 
+
+     
   </div>
+  
+
+  
 
   <script src="main.js"></script>
 </body>

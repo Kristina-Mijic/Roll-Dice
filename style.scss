@@ -1,58 +1,236 @@
 @import './color.scss';
 
-.card-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: $main-background-color;
-  text-align: center;
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+// .card-wrapper {
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: $main-background-color;
+//   text-align: center;
+
+//   .card-modal {
+//     // padding: 40px 80px;
+//     // background: $background-card;
+//     // border-radius: $border-radius;
+//     // display: inline-block;
+//     // vertical-align: middle;
+//     // width: 40%;
+//     // height: 60%;
+//     // position: relative;
+//     // margin: 10px;
+//     padding: 40px 80px;
+//     background: $background-card;
+//     border-radius: 10px;
+//     display: block;
+//     width: 50%;
+//     height: 60%;
+//     position: relative;
+//     transform: translate(-50%, -50%);
+//     top: 50%;
+//     left: 50%;
+//    }
+
+//   .card-modal .start-title {
+//     color: $font-color;
+//     font-size: 64px;
+//   }
+
+//   .card-modal .btn-next {
+//     cursor: pointer;
+//     position: absolute;
+//     right: 20px;
+//     bottom: 20px;
+//     padding: 20px 60px;
+//     border-radius: $border-radius;
+//     font-size: 24px;
+
+//     &:hover {
+//       background-color: $hover-btn-color;
+//       color: $white;
+//     }
+//   }
+// }
+
+// // .card-wrapper::before {
+// //   content: "";
+// //   display: inline-block;
+// //   width: 0;
+// //   height: 100%;
+// //   vertical-align: middle;
+// // }
+
+// .card-wrapper .input-modal
+//  {
+//   display: none;
+// }
+
+// .card-wrapper .last-card
+//  {
+//   display: none;
+// }
+
+// .card-wrapper .input-modal input {
+//   padding: 20px;
+//   min-width: 400px;
+//   border-radius: 10px;
+//   font-size: 18px;
+// }
+
+// .last-card .counter-modal {
+//   font-size: 64px;
+// }
+
+// // .players-cards-wrapper {
+  
+// // }
+
+// .players-cards-wrapper .cards-wrapper {
+//   display: flex;
+  
+//   .players {
+//     background-color: $background-card;
+//   }
+// }
+.btn {
+  cursor: pointer;
+  border-radius: $border-radius;
+  font-size: 2.4rem;
+
+  &:hover {
+    background-color: $hover-btn-color;
+    color: $white;
+  }
+}
+
+.cards-modals-wrapper {
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: $main-background-color;
+  position: relative;
 
   .card-modal {
-    padding: 40px 80px;
     background: $background-card;
-    border-radius: $border-radius;
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 800px;
-    min-height: 350px;
-    position: relative;
-    margin: 10px;
-  }
+    border-radius: 10px;
+    display: block;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
 
-  .card-modal .start-title {
-    color: $font-color;
-    font-size: 64px;
+    .start-title {
+      color: $font-color;
+      font-size: 6.4rem;
+      margin-bottom: 30px;
+    }
   }
 
   .card-modal .btn-next {
-    cursor: pointer;
     position: absolute;
     right: 20px;
     bottom: 20px;
     padding: 20px 60px;
-    border-radius: $border-radius;
-    font-size: 24px;
+  }
 
-    &:hover {
-      background-color: $hover-btn-color;
-      color: $white;
-    }
+  .input-modal {
+    display: none;
+  }
+
+  .last-card {
+    display: none;
+  }
+
+  .input-modal input {
+    padding: 20px;
+    min-width: 400px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+  }
+
+  .last-card .counter-modal {
+    font-size: 6.4rem;
   }
 }
 
-.card-wrapper::before {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  vertical-align: middle;
+.players-cards-wrapper {
+  display: none;
 }
 
-.card-wrapper .input-modal input {
-  padding: 20px;
-  min-width: 400px;
-  border-radius: 10px;
-  font-size: 18px;
+.players-cards-wrapper .two-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 90%;
+  
+  .players {
+    background-color: $background-card;
+    text-align: center;
+    height: 100%;
+    border: 1px solid black;
+    width: 50%;
+    position: relative;
+
+    .player-title {
+      font-size: 5rem;
+    }
+
+    .player-name {
+      font-size: 7rem;
+      color: $name-color;
+    }
+
+    img {
+      padding: 40px 0;
+    }
+
+    .player-total,
+    .player-current {
+      font-size: 3rem;
+      text-align: left;
+      width: 50%;
+    }
+  }
+
+  .btn-new-game {
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  .bottom-btn-game {
+    position: absolute;
+    z-index: 1;
+    padding: 5px 50px;
+    width: 15%;
+  }
+
+  .btn-store {
+    bottom: 15%;
+  }
+
+  .btn-roll {
+    bottom: 6%;
+  }
 }
