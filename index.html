@@ -8,21 +8,21 @@
   <title>Game Role Dice</title>
 </head>
 <body>
-  <div class="cards-modals-wrapper">
+  <div class="cards-modals-wrapper" id="cards-modals-wrapper-id">
 
-    <div class="card-modal" id="starting-card">
+    <div class="card-modal" id="starting-modal">
       <h1 class="start-title">ROLL DICE</h1>
       <img src="./images/dice-start.png" alt="">
       <button class="btn-next btn" id="btn-1">Next</button>
     </div>
 
-    <div class="card-modal input-modal" id="input-card-1">
+    <div class="card-modal input-modal" id="input-modal-1">
       <h1 class="start-title">Player 1</h1>
       <input type="text" name="" id="player1-input" placeholder="Uneti ime prvog igraca">
       <button class="btn-next btn" id="btn-2">Next</button>
     </div>
 
-    <div class="card-modal input-modal" id="input-card-2">
+    <div class="card-modal input-modal" id="input-modal-2">
       <h1 class="start-title">Player 2</h1>
       <input type="text" name="" id="player2-input" placeholder="Uneti ime drugog igraca">
       <button class="btn-next btn" id="btn-3">Next</button>
@@ -35,28 +35,35 @@
     <div class="players-cards-wrapper" id="cards-players">
       <div class="two-cards-wrapper card-modal"> 
         
-        <div class="player-1-card players">
-          <h1 class="player-title">Igrac 1</h1>
+        <div class="players active-player" id="player-1-card">
+          <h1 class="player-title">IGRAC 1</h1>
           <h2 class="player-name" id="player-name-1"></h2>
-          <img src="./images/dice-1.png" alt="">
-          <p class="player-total">TOTAL:</p>
-          <p class="player-current">CURRENT:</p>
+          <h1 class="winner-player-text" id="winner-player1-text"></h1>
+          <img id="dice-image" class="dice-background" alt="">
+          <p class="player-total" id="player1-total-id">TOTAL:</p>
+          <p class="player-current" id="player1-current-id">CURRENT:</p>
         </div>
-          <button class="btn-new-game btn">New Game</button>
 
+          <button class="btn-new-game btn" id="btn-new-game">New Game</button>
           <button class="btn-store btn bottom-btn-game" id="btn-store-id">Store</button>
-          <button class="btn-roll btn bottom-btn-game" id="btn-roll-id">Roll</button>
+          <button class="btn-roll btn bottom-btn-game" id="btn-roll-id">Roll Dice</button>
 
-         <div class="player-2 players players">
-          <h1 class="player-title">Igrac 2</h1>
+         <div class="players no-active-player" id="player-2-card">
+          <h1 class="player-title">IGRAC 2</h1>
           <h2 class="player-name" id="player-name-2"></h2>
-          <img src="./images/dice-1.png" alt="">
-          <p class="player-total">TOTAL:</p>
-          <p class="player-current">CURRENT:</p>
+          <h1 class="winner-player-text" id="winner-player2-text"></h1>
+          <img id="dice-image-p2" class="dice-background" alt="">
+          <p class="player-total" id="player2-total-id">TOTAL:</p>
+          <p class="player-current" id="player2-current-id">CURRENT:</p>
         </div> 
   
       </div>
     </div> 
+
+    <div class="card-modal confirme-new-game-modal" id="new-game-modal-id">
+      <p class="cofirme-info">Are you sure u want exit game?</p>
+      <input type="button" value="New Game" class="btn confirme-new-game-btn" id="confirme-new-game-btn"></input>
+    </div>
 
      
   </div>

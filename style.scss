@@ -171,66 +171,117 @@ html {
   .last-card .counter-modal {
     font-size: 6.4rem;
   }
-}
 
-.players-cards-wrapper {
-  display: none;
-}
+  .players-cards-wrapper {
+    display: none;
+  }
 
-.players-cards-wrapper .two-cards-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  height: 90%;
-  
-  .players {
-    background-color: $background-card;
-    text-align: center;
-    height: 100%;
-    border: 1px solid black;
-    width: 50%;
-    position: relative;
-
-    .player-title {
-      font-size: 5rem;
-    }
-
-    .player-name {
-      font-size: 7rem;
-      color: $name-color;
-    }
-
-    img {
-      padding: 40px 0;
-    }
-
-    .player-total,
-    .player-current {
-      font-size: 3rem;
-      text-align: left;
+  .players-cards-wrapper .two-cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 90%;
+    
+    .players {
+      background-color: $background-card;
+      text-align: center;
+      height: 100%;
+      border: 1px solid black;
       width: 50%;
+      position: relative;
+      padding: 20px 0;
+      
+      .player-title {
+        font-size: 3rem;
+      }
+
+      .player-name {
+        font-size: 7rem;
+        color: $name-color;
+      }
+
+      img {
+        padding: 40px 0;
+      }
+
+      .player-total,
+      .player-current {
+        font-size: 3rem;
+        text-align: left;
+        width: 50%;
+      }
+
+      .dice-background {
+        background-image: url(./images/);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: auto;
+        height: 350px;
+        // margin: 40px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .active-player {
+      background-color: $active-player-background;
+      color: $white;
+    }
+
+    .no-active-player {
+      opacity: 20%;
+    }
+
+    .winner-player{
+      background-color: $winner-player;
+    }
+
+    .winner-player-text {
+      font-size: 50px;
+      color: $white;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      position: absolute;
+      right: 40px;
+    }
+
+    .btn-new-game {
+      position: absolute;
+      top: 5%;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .bottom-btn-game {
+      position: absolute;
+      z-index: 1;
+      padding: 5px 50px;
+      width: 20%;
+    }
+
+    .btn-store {
+      bottom: 15%;
+    }
+
+    .btn-roll {
+      bottom: 6%;
     }
   }
 
-  .btn-new-game {
-    position: absolute;
-    top: 5%;
-    z-index: 1;
-    padding: 20px;
-  }
+  .confirme-new-game-modal {
+    display: none;
 
-  .bottom-btn-game {
-    position: absolute;
-    z-index: 1;
-    padding: 5px 50px;
-    width: 15%;
-  }
+    .cofirme-info {
+      font-size: 4rem;
+      padding-bottom: 50px;
+    }
 
-  .btn-store {
-    bottom: 15%;
-  }
-
-  .btn-roll {
-    bottom: 6%;
+    .confirme-new-game-btn {
+      padding: 15px 40px;
+    }
   }
 }
